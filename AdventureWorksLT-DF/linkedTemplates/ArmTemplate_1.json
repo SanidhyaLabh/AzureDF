@@ -580,7 +580,7 @@
 									],
 									"outputs": [
 										{
-											"referenceName": "ds_product_dl",
+											"referenceName": "ds_product_md_pl_dl",
 											"type": "DatasetReference",
 											"parameters": {}
 										}

@@ -608,7 +608,7 @@
 									],
 									"outputs": [
 										{
-											"referenceName": "ds_product_dl",
+											"referenceName": "ds_product_md_pl_dl",
 											"type": "DatasetReference",
 											"parameters": {}
 										}
@@ -1026,7 +1026,7 @@
 				"[concat(variables('factoryId'), '/datasets/ds_SalesLTorders_sql')]",
 				"[concat(variables('factoryId'), '/datasets/ds_SalesLTorderHeader_sql')]",
 				"[concat(variables('factoryId'), '/datasets/ds_SalesLTcustomer_sql')]",
-				"[concat(variables('factoryId'), '/datasets/ds_product_dl')]",
+				"[concat(variables('factoryId'), '/datasets/ds_product_md_pl_dl')]",
 				"[concat(variables('factoryId'), '/datasets/ds_address_md_pl_dl')]",
 				"[concat(variables('factoryId'), '/datasets/ds_orderdetail_md_pl_dl')]",
 				"[concat(variables('factoryId'), '/datasets/ds_orderheader_md_pl_dl')]",
@@ -1693,8 +1693,8 @@
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobFSLocation",
-						"fileName": "Address",
-						"fileSystem": "rawbybetadatadrivenpl"
+						"fileName": "address",
+						"fileSystem": "rawbymetadatadrivenpl"
 					},
 					"columnDelimiter": "\t",
 					"escapeChar": "\\",
@@ -1722,7 +1722,7 @@
 					"location": {
 						"type": "AzureBlobFSLocation",
 						"fileName": "Customer",
-						"fileSystem": "rawbybetadatadrivenpl"
+						"fileSystem": "rawbymetadatadrivenpl"
 					},
 					"columnDelimiter": "\t",
 					"escapeChar": "\\",
@@ -1784,8 +1784,8 @@
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobFSLocation",
-						"fileName": "order_detail",
-						"fileSystem": "rawbybetadatadrivenpl"
+						"fileName": "Order_detail",
+						"fileSystem": "rawbymetadatadrivenpl"
 					},
 					"columnDelimiter": "\t",
 					"escapeChar": "\\",
@@ -1812,8 +1812,8 @@
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobFSLocation",
-						"fileName": "Orderheader",
-						"fileSystem": "rawbybetadatadrivenpl"
+						"fileName": "Order_header",
+						"fileSystem": "rawbymetadatadrivenpl"
 					},
 					"columnDelimiter": "\t",
 					"escapeChar": "\\",
@@ -1827,7 +1827,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/ds_product_dl')]",
+			"name": "[concat(parameters('factoryName'), '/ds_product_md_pl_dl')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -1835,16 +1835,13 @@
 					"referenceName": "ls_advdl",
 					"type": "LinkedServiceReference"
 				},
-				"folder": {
-					"name": "DataLake_datasets"
-				},
 				"annotations": [],
 				"type": "DelimitedText",
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobFSLocation",
-						"fileName": "Product",
-						"fileSystem": "rawbybetadatadrivenpl"
+						"fileName": "product",
+						"fileSystem": "rawbymetadatadrivenpl"
 					},
 					"columnDelimiter": "\t",
 					"escapeChar": "\\",
