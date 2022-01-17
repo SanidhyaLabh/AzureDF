@@ -1,0 +1,9 @@
+{
+	"name": "AdventureWorksLT-DF",
+	"location": "eastus2",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "3f7fceaa-e953-4edf-9118-1d1cc405217a",
+		"tenantId": "d64ba4ce-ac3e-4759-bd04-823181b10e68"
+	}
+}

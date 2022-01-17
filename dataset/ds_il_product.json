@@ -1,0 +1,31 @@
+{
+	"name": "ds_il_product",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_advdl",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "incremental load datasets"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@CONCAT('Incremental-', pipeline().RunId, '.txt')",
+					"type": "Expression"
+				},
+				"folderPath": "il_product",
+				"fileSystem": "raw"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
