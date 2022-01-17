@@ -5,6 +5,9 @@
 			"referenceName": "ls_advdl",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "metadatadriven_datasets"
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
